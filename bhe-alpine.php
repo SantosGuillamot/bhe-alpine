@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       bhe-alpine
  * Version:           0.1.0
@@ -11,11 +12,11 @@
  */
 function bhe_alpine_init()
 {
-    wp_register_script(
+	wp_register_script(
 		'AlpineJS',
 		'https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js',
 		array(),
-		"3.10.3", 
+		"3.10.3",
 		true // Load it in the footer
 	);
 
@@ -31,7 +32,23 @@ function bhe_alpine_init()
 }
 add_action('init', 'bhe_alpine_init');
 
-add_filter( 'enqueue_alpine', function( $content ) {
-	wp_enqueue_script( 'AlpineJS' );
-    return $content;
+add_filter('render_block_bhe-alpine/interactive-child', function ($content) {
+	wp_enqueue_script('AlpineJS');
+	return $content;
+});
+
+add_filter('render_block_bhe-alpine/interactive-parent', function ($content) {
+	wp_enqueue_script('AlpineJS');
+	return $content;
+});
+
+add_filter('render_block_bhe-alpine/non-interactive-parent', function ($content) {
+	wp_enqueue_script('AlpineJS');
+	return $content;
+});
+
+// Add Alpine to the Editor
+add_action('enqueue_block_editor_assets', function ($content) {
+	wp_enqueue_script('AlpineJS');
+	return $content;
 });
