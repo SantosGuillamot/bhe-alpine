@@ -1,0 +1,8 @@
+{
+    "apiVersion": 2,
+	"title": "BHE Alpine - Interactive Parent",
+	"name": "bhe-alpine/interactive-parent",
+	"category": "text",
+	"icon": "flag",
+    "editorScript": "file:./index.js"
+}

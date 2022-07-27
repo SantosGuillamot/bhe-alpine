@@ -29,7 +29,7 @@ function bhe_alpine_init()
 		plugin_dir_path(__FILE__) . 'build/blocks/non-interactive-parent/'
 	);
 }
-add_action('init', 'block_hydration_experiments_init');
+add_action('init', 'bhe_alpine_init');
 
 add_filter( 'enqueue_alpine', function( $content ) {
 	wp_enqueue_script( 'AlpineJS' );
