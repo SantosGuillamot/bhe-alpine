@@ -1,0 +1,27 @@
+{
+	"apiVersion": 2,
+	"title": "BHE Alpine - Non Interactive Parent",
+	"name": "bhe-alpine/non-interactive-parent",
+	"category": "text",
+	"icon": "flag",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "text",
+			"selector": "h2",
+			"public": true
+		}
+	},
+	"providesContext": {
+		"bhe-alpine/non-interactive-title": "title"
+	},
+	"supports": {
+		"color": {
+			"text": true
+		},
+		"html": true
+	},
+	"textdomain": "bhe-alpine",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

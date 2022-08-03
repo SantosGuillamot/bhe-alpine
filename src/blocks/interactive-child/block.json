@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "bhe-alpine/interactive-child",
+	"version": "0.1.0",
+	"title": "BHE Alpine - Interactive Child",
+	"category": "text",
+	"icon": "flag",
+	"description": "",
+	"usesContext": [
+		"bhe-alpine/interactive-title",
+		"bhe-alpine/non-interactive-title"
+	],
+	"supports": {
+		"color": {
+			"text": true
+		},
+		"typography": {
+			"fontSize": true
+		},
+		"html": true
+	},
+	"textdomain": "bhe-alpine",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./style.css",
+	"style": "file:./style-index.css"
+}

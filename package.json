@@ -1,0 +1,43 @@
+{
+	"name": "bhe-alpine",
+	"version": "0.1.0",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start",
+		"wp-env": "wp-env"
+	},
+	"prettier": {
+		"useTabs": true,
+		"tabWidth": 4,
+		"printWidth": 80,
+		"singleQuote": true,
+		"trailingComma": "es5",
+		"bracketSameLine": false,
+		"bracketSpacing": true,
+		"semi": true,
+		"arrowParens": "always",
+		"phpVersion": "5.6"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.17.10",
+		"@babel/preset-env": "^7.17.10",
+		"@prettier/plugin-php": "^0.18.9",
+		"@types/jest": "^27.5.1",
+		"@wordpress/blocks": "^11.7.0",
+		"@wordpress/element": "^4.3.0",
+		"@wordpress/env": "^4.4.0",
+		"@wordpress/scripts": "^22.3.0",
+		"babel-jest": "^28.1.0",
+		"jest": "^28.1.0",
+		"prettier": "^2.7.1"
+	}
+}
