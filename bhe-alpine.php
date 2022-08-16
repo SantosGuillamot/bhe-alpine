@@ -29,6 +29,10 @@ function bhe_alpine_init()
 	register_block_type(
 		plugin_dir_path(__FILE__) . 'build/blocks/non-interactive-parent/'
 	);
+	// Dynamic blocks
+	register_block_type(
+		plugin_dir_path(__FILE__) . 'build/blocks/dynamic-interactive-parent/'
+	);
 }
 add_action('init', 'bhe_alpine_init');
 
