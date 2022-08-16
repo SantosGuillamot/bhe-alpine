@@ -1,10 +1,10 @@
-.wp-block-bhe-non-interactive-parent {
+.wp-block-bhe-alpine-non-interactive-parent {
     border: 1px solid rgb(34, 168, 235);
     position: relative;
     padding: 25px 10px;
 }
 
-.wp-block-bhe-non-interactive-parent::before {
+.wp-block-bhe-alpine-non-interactive-parent::before {
     content: 'BHE - Non Interactive Parent';
     position: absolute;
     top: 0;
