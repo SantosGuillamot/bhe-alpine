@@ -3,7 +3,7 @@
 // global but cannot import it because it shouldn't be loaded on the frontend of
 // the site.
 import '@wordpress/block-editor';
-import { InnerBlocks, useBlockProps, RichText } from '@wordpress/block-editor';
+import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 import { useEntityProp } from '@wordpress/core-data';
 
 const Edit = ({ attributes, setAttributes, context }) => {
@@ -19,9 +19,10 @@ const Edit = ({ attributes, setAttributes, context }) => {
 
     return (
         <div {...blockProps}>
-            <h2
-                dangerouslySetInnerHTML={{ __html: fullTitle?.rendered }}
-            />
+            <h2>Post Title: {fullTitle?.rendered}</h2>
+            <button onClick={() => setAttributes({ counter: attributes.counter + 1 })}>
+                {attributes.counter}
+            </button>
             <InnerBlocks />
         </div>
     )
