@@ -37,6 +37,20 @@ function bhe_alpine_init()
 			'render_callback' => 'render_block_dynamic_interactive_parent'
 		)
 	);
+	require_once __DIR__ . '/src/blocks/dynamic-interactive-child/index.php';
+	register_block_type(
+		plugin_dir_path(__FILE__) . 'build/blocks/dynamic-interactive-child/',
+		array(
+			'render_callback' => 'render_block_dynamic_interactive_child'
+		)
+	);
+	require_once __DIR__ . '/src/blocks/dynamic-non-interactive-parent/index.php';
+	register_block_type(
+		plugin_dir_path(__FILE__) . 'build/blocks/dynamic-non-interactive-parent/',
+		array(
+			'render_callback' => 'render_block_dynamic_non_interactive_parent'
+		)
+	);
 }
 add_action('init', 'bhe_alpine_init');
 
@@ -56,6 +70,16 @@ add_filter('render_block_bhe-alpine/non-interactive-parent', function ($content)
 });
 
 add_filter('render_block_bhe-alpine/dynamic-interactive-parent', function ($content) {
+	wp_enqueue_script('AlpineJS');
+	return $content;
+});
+
+add_filter('render_block_bhe-alpine/dynamic-interactive-child', function ($content) {
+	wp_enqueue_script('AlpineJS');
+	return $content;
+});
+
+add_filter('render_block_bhe-alpine/dynamic-non-interactive-parent', function ($content) {
 	wp_enqueue_script('AlpineJS');
 	return $content;
 });

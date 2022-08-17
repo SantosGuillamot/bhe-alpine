@@ -22,7 +22,8 @@
 			"type": "string",
 			"source": "text",
 			"selector": "h2",
-			"public": true
+			"public": true,
+			"default": "Default Interactive Title"
 		},
 		"secret": {
 			"type": "string",
@@ -41,7 +42,7 @@
 		"html": true
 	},
 	"providesContext": {
-		"bhe-alpine/interactive-title": "title"
+		"bhe-alpine/dynamic-interactive-title": "title"
 	},
 	"textdomain": "bhe-alpine",
 	"editorScript": "file:./index.js",
