@@ -15,14 +15,12 @@
 	"attributes": {
 		"counter": {
 			"type": "number",
-			"default": 0,
-			"public": true
+			"default": 0
 		},
 		"title": {
 			"type": "string",
 			"source": "text",
 			"selector": "h2",
-			"public": true,
 			"default": "Default Interactive Title"
 		},
 		"secret": {
