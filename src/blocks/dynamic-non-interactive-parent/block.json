@@ -1,0 +1,32 @@
+{
+	"apiVersion": 2,
+	"title": "BHE Alpine - Dynamic Non Interactive Parent",
+	"name": "bhe-alpine/dynamic-non-interactive-parent",
+	"category": "text",
+	"icon": "flag",
+	"usesContext": [
+		"postId",
+		"postType",
+		"queryId"
+	],
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "text",
+			"selector": "h2",
+			"default": "Default Non Interactive Title"
+		}
+	},
+	"providesContext": {
+		"bhe-alpine/dynamic-non-interactive-title": "title"
+	},
+	"supports": {
+		"color": {
+			"text": true
+		},
+		"html": true
+	},
+	"textdomain": "bhe-alpine",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

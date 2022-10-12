@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "bhe-alpine/dynamic-interactive-parent",
+	"version": "0.1.0",
+	"title": "BHE Alpine - Dynamic Interactive Parent",
+	"category": "text",
+	"icon": "flag",
+	"description": "",
+	"usesContext": [
+		"postId",
+		"postType",
+		"queryId"
+	],
+	"attributes": {
+		"counter": {
+			"type": "number",
+			"default": 0
+		},
+		"title": {
+			"type": "string",
+			"source": "text",
+			"selector": "h2",
+			"default": "Default Interactive Title"
+		},
+		"secret": {
+			"type": "string",
+			"default": "fa4e3d47e4e0a38c5c57533391855013"
+		}
+	},
+	"supports": {
+		"color": {
+			"text": true
+		},
+		"typography": {
+			"fontSize": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true
+		},
+		"html": true
+	},
+	"providesContext": {
+		"bhe-alpine/dynamic-interactive-title": "title"
+	},
+	"textdomain": "bhe-alpine",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./style.css",
+	"style": "file:./style-index.css"
+}
